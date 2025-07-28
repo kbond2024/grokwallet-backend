@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: grokwallet-backend
+    region: oregon
+    plan: free
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: PORT
+        value: 10000
